@@ -23,14 +23,13 @@ player.getVideoTitle().then(function (title) {
 const currentTame = localStorage.getItem('videoplayer-current-time');
 const startTame = JSON.parse(currentTame);
 console.log(startTame);
-player
-  .setCurrentTime(currentTame)
-  .then(function (seconds) {})
-  .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        break;
-      default:
-        break;
-    }
-  });
+player.setCurrentTime(currentTame || 0);
+// .then(function (seconds) {})
+// .catch(function (error) {
+//   switch (error.name) {
+//     case 'RangeError':
+//       break;
+//     default:
+//       break;
+//   }
+// });

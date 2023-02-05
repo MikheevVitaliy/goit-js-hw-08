@@ -66,7 +66,7 @@ function onFormSudmit(evt) {
 
 function onFormInput(e) {
   formData[e.target.name] = e.target.value;
-  console.log(formData);
+  console.log(e.target.value);
   const formDataString = JSON.stringify(formData);
   localStorage.setItem(STORAGE_KEY, formDataString);
 }
