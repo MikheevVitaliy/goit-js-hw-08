@@ -65,8 +65,11 @@ function onFormSudmit(evt) {
 }
 
 function onFormInput(e) {
-  formData[e.target.name] = e.target.value;
-  console.log(e.target.value);
+  // formData[e.target.name] = e.target.value;
+  formData.email = containerFormEl.email.value;
+  formData.message = containerFormEl.message.value;
+  console.log(formData.email);
+  console.log(formData.message);
   const formDataString = JSON.stringify(formData);
   localStorage.setItem(STORAGE_KEY, formDataString);
 }
